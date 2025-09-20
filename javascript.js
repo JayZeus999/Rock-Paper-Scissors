@@ -11,3 +11,6 @@ function getHumanChoice(){
     prompt("Enter rock, paper, or scissors");
 }
 console.log(getHumanChoice());
+
+humanScore = 0;
+computerScore = 0;
