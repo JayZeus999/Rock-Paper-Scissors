@@ -1,8 +1,8 @@
 console.log("Hello World");
 
 function getComputerChoice(){
-    let stuff = ("rock", "paper", "scissors")
+    let stuff = ["rock", "paper", "scissors"]
+    return stuff[Math.floor(Math.random() * 2)];
 }
 
-let rand = Math.round(Math.random()*2)
-console.log(getComputerChoice())
+console.log(getComputerChoice());
