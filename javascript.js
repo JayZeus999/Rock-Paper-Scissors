@@ -1,4 +1,3 @@
-console.log("Hello World");
 
 function getComputerChoice(){
     let stuff = ["rock", "paper", "scissors"]
@@ -14,3 +13,10 @@ console.log(getHumanChoice());
 
 humanScore = 0;
 computerScore = 0;
+
+function playRound(humanChoice, computerChoice){
+
+}
+
+let humanChoice = getHumanChoice().toLowerCase();
+let computerChoice = getComputerChoice();
