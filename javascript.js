@@ -6,3 +6,8 @@ function getComputerChoice(){
 }
 
 console.log(getComputerChoice());
+
+function getHumanChoice(){
+    prompt("Enter rock, paper, or scissors");
+}
+console.log(getHumanChoice());
