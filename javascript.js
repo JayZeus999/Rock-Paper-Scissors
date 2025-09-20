@@ -7,16 +7,20 @@ function getComputerChoice(){
 console.log(getComputerChoice());
 
 function getHumanChoice(){
-    return prompt("Enter rock, paper, or scissors");
+    return prompt("Enter rock, paper, or scissors").toLowerCase();
 }
 console.log(getHumanChoice());
 
 humanScore = 0;
 computerScore = 0;
 
-function playRound(humanChoice, computerChoice){
-
+function playRound(humanChoice, computerChoice) {
+  if (humanChoice == computerChoice){
+    console.log("a draw, go again")
+  }
 }
 
-let humanChoice = getHumanChoice().toLowerCase();
-let computerChoice = getComputerChoice();
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
