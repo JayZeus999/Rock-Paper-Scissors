@@ -13,8 +13,6 @@ function getHumanChoice() {
 function playGame() {
   let humanScore = 0;
   let computerScore = 0;
-  console.log(`The current human score is: ${humanScore}`)
-  console.log(`The current computer score is: ${computerScore}`)
 
   function playRound(humanChoice, computerChoice) {
 
@@ -45,9 +43,9 @@ function playGame() {
     }
 
     else if (humanChoice === computerChoice) {
-      console.log("draw");
       console.log(`The human choice is ${humanChoice}`);
       console.log(`The computer choice is ${computerChoice}`)
+      console.log("draw");
       console.log(`The current human score is: ${humanScore}`)
       console.log(`The current computer score is: ${computerScore}`)
     }
@@ -55,6 +53,8 @@ function playGame() {
   }
 
 
+  playRound(getHumanChoice(), getComputerChoice());
+  playRound(getHumanChoice(), getComputerChoice());
   playRound(getHumanChoice(), getComputerChoice());
   playRound(getHumanChoice(), getComputerChoice());
   playRound(getHumanChoice(), getComputerChoice());
