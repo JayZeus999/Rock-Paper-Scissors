@@ -15,6 +15,11 @@ function playGame(){
   function playRound(humanChoice, computerChoice) {
     let humanScore = 0;
     let computerScore = 0;
+    function sum(humanScore,computerScore){
+    humanScore += 1;
+    computerScore += 1;
+  }
+  sum();
 
     if ((humanChoice === "rock" && computerChoice === "scissors") ||
       
@@ -37,7 +42,7 @@ function playGame(){
     (humanChoice === "scissors" && computerChoice === "rock") ){
       console.log(humanChoice);
       console.log(computerChoice);
-      console.log("you lose, paper wins");
+      console.log("you lose");
       computerScore += 1;
       console.log("The computer score is ", computerScore);
       console.log("The human score is ", humanScore);
@@ -47,6 +52,7 @@ function playGame(){
       console.log("draw");
     }
   }
+
 
   playRound(getHumanChoice(), getComputerChoice());
   playRound(getHumanChoice(), getComputerChoice());
