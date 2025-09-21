@@ -23,6 +23,7 @@ function playGame(){
      (humanChoice === "scissors" && computerChoice === "paper") 
     ) {
       console.log(humanChoice);
+      console.log(computerChoice);
       console.log("you win");
       humanScore += 1;
       console.log("The computer score is ", computerScore);
@@ -34,6 +35,7 @@ function playGame(){
     else if ((humanChoice === "rock" && computerChoice === "paper") ||      
     (humanChoice === "paper" && computerChoice === "scissors") ||
     (humanChoice === "scissors" && computerChoice === "rock") ){
+      console.log(humanChoice);
       console.log(computerChoice);
       console.log("you lose, paper wins");
       computerScore += 1;
