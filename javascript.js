@@ -58,13 +58,13 @@ function playGame() {
   playRound(getHumanChoice(), getComputerChoice());
   playRound(getHumanChoice(), getComputerChoice());
   playRound(getHumanChoice(), getComputerChoice());
+  if (humanScore > computerScore){
+  console.log("human wins");
+  }else if (computerScore > humanScore){
+  console.log("computer wins");
+}
 
 }
 
 playGame();
 
-// if (humanScore > computerScore){
-//   console.log("human wins");
-// }else if (computerScore > humanScore){
-//   console.log("computer wins");
-// }
