@@ -11,14 +11,15 @@ function getHumanChoice(){
 }
 console.log(getHumanChoice());
 
-humanScore = 0;
-computerScore = 0;
+let humanScore = 0;
+let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
   if (humanChoice == computerChoice){
     console.log("a draw, go again")
   }else if (humanChoice === "rock" && computerChoice === "paper"){
     console.log("you lose, paper wins")
+    computerScore += 1;
   }else if (humanChoice === "rock" && computerChoice === "scissors"){
     console.log("you win, rock rules")
   }else if (humanChoice === "paper" && computerChoice === "rock"){
@@ -36,3 +37,6 @@ const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 playRound(humanSelection, computerSelection);
+
+console.log("The computer score is " ,computerScore);
+console.log("The human score is " ,humanScore);
