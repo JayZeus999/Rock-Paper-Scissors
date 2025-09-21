@@ -1,7 +1,7 @@
 
 function getComputerChoice() {
   let stuff = ["rock", "paper", "scissors"]
-  return (stuff[Math.round(Math.random() * 2)]);
+  return (stuff[Math.floor(Math.random() * 3)]);
 }
 
 
@@ -46,6 +46,10 @@ function playGame() {
 
     else if (humanChoice === computerChoice) {
       console.log("draw");
+      console.log(`The human choice is ${humanChoice}`);
+      console.log(`The computer choice is ${computerChoice}`)
+      console.log(`The current human score is: ${humanScore}`)
+      console.log(`The current computer score is: ${computerScore}`)
     }
 
   }
@@ -53,13 +57,14 @@ function playGame() {
 
   playRound(getHumanChoice(), getComputerChoice());
   playRound(getHumanChoice(), getComputerChoice());
-  if (humanScore > computerScore) {
-    console.log("human wins");
-  } else if (computerScore > humanScore) {
-    console.log("computer wins");
-  }
+  playRound(getHumanChoice(), getComputerChoice());
 
 }
 
 playGame();
 
+// if (humanScore > computerScore){
+//   console.log("human wins");
+// }else if (computerScore > humanScore){
+//   console.log("computer wins");
+// }
