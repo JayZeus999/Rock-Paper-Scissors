@@ -49,13 +49,14 @@ function playGame(){
       humanScore += 1;
       console.log("The computer score is ", computerScore);
       console.log("The human score is ", humanScore);
+    }else{
+      console.log("draw")
+      console.log("The computer score is ", computerScore);
+      console.log("The human score is ", humanScore);
     }
   }
 
-  getHumanChoice();
-  getComputerChoice();
-
-  playRound(getHumanChoice, getComputerChoice);
+  playRound(getHumanChoice(), getComputerChoice());
 }
 
 playGame();
