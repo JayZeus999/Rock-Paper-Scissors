@@ -6,7 +6,10 @@ function getComputerChoice() {
 
 
 function getHumanChoice() {
-  return (prompt("Enter rock, paper, or scissors").toLowerCase());
+  // return (prompt("Enter rock, paper, or scissors").toLowerCase());
+  let btn = document.createElement("button");
+  let btn1 = document.createElement("button");
+  let btn2 = document.createElement("button");
 }
 
 playRound(getHumanChoice(), getComputerChoice());
