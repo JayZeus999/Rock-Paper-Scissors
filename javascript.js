@@ -9,8 +9,9 @@ function getHumanChoice() {
   return (prompt("Enter rock, paper, or scissors").toLowerCase());
 }
 
+playRound(getHumanChoice(), getComputerChoice());
 
-function playGame() {
+// function playGame() {
   let humanScore = 0;
   let computerScore = 0;
 
@@ -53,18 +54,18 @@ function playGame() {
   }
 
 
-  playRound(getHumanChoice(), getComputerChoice());
-  playRound(getHumanChoice(), getComputerChoice());
-  playRound(getHumanChoice(), getComputerChoice());
-  playRound(getHumanChoice(), getComputerChoice());
-  playRound(getHumanChoice(), getComputerChoice());
+  // playRound(getHumanChoice(), getComputerChoice());
+  // playRound(getHumanChoice(), getComputerChoice());
+  // playRound(getHumanChoice(), getComputerChoice());
+  // playRound(getHumanChoice(), getComputerChoice());
+  // playRound(getHumanChoice(), getComputerChoice());
   if (humanScore > computerScore){
   console.log("human wins");
   }else if (computerScore > humanScore){
   console.log("computer wins");
 }
 
-}
+// }
 
-playGame();
+// playGame();
 
