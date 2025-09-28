@@ -22,7 +22,7 @@ function playRound(humanChoice, computerChoice) {
     computerScore += 0;
     scoreBoard.textContent = `It's a tie between ${humanChoice} & ${computerChoice}`
   }
-  
+
   else if ((humanChoice === "rock" && computerChoice === "scissors") ||
 
     (humanChoice === "paper" && computerChoice === "rock") ||
@@ -37,7 +37,7 @@ function playRound(humanChoice, computerChoice) {
     (humanChoice === "paper" && computerChoice === "scissors") ||
     (humanChoice === "scissors" && computerChoice === "rock")) {
     computerScore += 1;
-    scoreBoard.textContent = `You win! ${humanChoice} beats ${humanChoice}`
+    scoreBoard.textContent = `You win! ${humanChoice} beats ${computerChoice}`
   }
 
   scoreBoard.textContent += `  Score : ${humanScore} - ${computerScore}`
