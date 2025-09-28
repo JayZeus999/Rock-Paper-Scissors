@@ -1,20 +1,10 @@
+const scoreBoard = document.createElement("div");
 
 function getComputerChoice() {
   let stuff = ["rock", "paper", "scissors"]
   return (stuff[Math.floor(Math.random() * 3)]);
 }
 
-
-function getHumanChoice() {
-  // return (prompt("Enter rock, paper, or scissors").toLowerCase());
-  let btn = document.createElement("button");
-  let btn1 = document.createElement("button");
-  let btn2 = document.createElement("button");
-
-  btn.textContent = "Rock";
-  btn1.textContent = "Paper";
-  btn2.textContent = "Scissors";
-}
 
 
 // function playGame() {
@@ -60,25 +50,32 @@ function playRound(humanChoice, computerChoice) {
 }
 
 
-// playRound(getHumanChoice(), getComputerChoice());
-// playRound(getHumanChoice(), getComputerChoice());
-// playRound(getHumanChoice(), getComputerChoice());
-// playRound(getHumanChoice(), getComputerChoice());
-// playRound(getHumanChoice(), getComputerChoice());
-
-btn.addEventListener("click", () => {
-  playRound(getHumanChoice(), getComputerChoice());
+let rockbtn = document.createElement("button");
+rockbtn.textContent = "Rock";
+rockbtn.addEventListener("click", () => {
+  playRound(rock, getComputerChoice());
 });
+document.body.appendChild(rockbtn);
+
+let paperbtn = document.createElement("button");
+paperbtn.textContent = "Paper";
+paperbtn.addEventListener("click", () => {
+  playRound(paper, getComputerChoice());
+});
+document.body.appendChild(paperbtn);
+
+let scissorsbtn = document.createElement("button");
+scissorsbtn.textContent = "Scissors";
+scissorsbtn.addEventListener("click", () => {
+  playRound(scissors, getComputerChoice());
+});
+document.body.appendChild(scissorsbtn);
 
 
-if (humanScore > computerScore) {
-  console.log("human wins");
-} else if (computerScore > humanScore) {
-  console.log("computer wins");
-}
 
 
-// }
 
-// playGame();
+
+
+
 
