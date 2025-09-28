@@ -44,10 +44,12 @@ function playRound(humanChoice, computerChoice) {
 
   if (humanScore === 5) {
     scoreBoard.textContent = `🎉 You reached 5! You win the game!`;
-    scoreBoard.textContent = " ";
+    humanScore = 0;
+    computerScore = 0;
   } else if (computerScore === 5) {
     scoreBoard.textContent = `💻 Computer reached 5! Computer wins the game!`;
-    scoreBoard.textContent = " ";
+    humanScore = 0;
+    computerScore = 0;
   }
 }
 
