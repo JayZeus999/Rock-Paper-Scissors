@@ -1,4 +1,5 @@
 const scoreBoard = document.createElement("div");
+document.body.appendChild(scoreBoard);
 
 function getComputerChoice() {
   let stuff = ["rock", "paper", "scissors"]
@@ -19,55 +20,52 @@ function playRound(humanChoice, computerChoice) {
 
     (humanChoice === "scissors" && computerChoice === "paper")
   ) {
-    console.log(`The human choice is ${humanChoice}`);
-    console.log(`The computer choice is ${computerChoice}`);
-    console.log("you win");
     humanScore += 1;
-    console.log(`The current human score is: ${humanScore}`)
-    console.log(`The current computer score is: ${computerScore}`)
+    scoreBoard.textContent = `You win! ${humanChoice} beats ${computerChoice}`
   }
 
 
   else if ((humanChoice === "rock" && computerChoice === "paper") ||
     (humanChoice === "paper" && computerChoice === "scissors") ||
     (humanChoice === "scissors" && computerChoice === "rock")) {
-    console.log(`The human choice is ${humanChoice}`);
-    console.log(`The computer choice is ${computerChoice}`);
-    console.log("you lose");
     computerScore += 1;
-    console.log(`The current human score is: ${humanScore}`)
-    console.log(`The current computer score is: ${computerScore}`)
+    scoreBoard.textContent = `You win! ${humanChoice} beats ${humanChoice}`
   }
 
   else if (humanChoice === computerChoice) {
-    console.log(`The human choice is ${humanChoice}`);
-    console.log(`The computer choice is ${computerChoice}`)
-    console.log("draw");
-    console.log(`The current human score is: ${humanScore}`)
-    console.log(`The current computer score is: ${computerScore}`)
+    humanScore += 0;
+    computerScore += 0;
+    scoreBoard.textContent = `It's a tie!`
   }
 
+  scoreBoard.textContent += `  Score : ${humanScore} - ${computerScore}`
+
+  if (humanScore === 5){
+    scoreBoard.textContent = `🎉 You reached 5! You win the game!`;
+  }else if (computerScore === 5){
+    scoreBoard.textContent = `💻 Computer reached 5! Computer wins the game!`;
+  }
 }
 
 
 let rockbtn = document.createElement("button");
 rockbtn.textContent = "Rock";
 rockbtn.addEventListener("click", () => {
-  playRound(rock, getComputerChoice());
+  playRound("rock", getComputerChoice());
 });
 document.body.appendChild(rockbtn);
 
 let paperbtn = document.createElement("button");
 paperbtn.textContent = "Paper";
 paperbtn.addEventListener("click", () => {
-  playRound(paper, getComputerChoice());
+  playRound("paper", getComputerChoice());
 });
 document.body.appendChild(paperbtn);
 
 let scissorsbtn = document.createElement("button");
 scissorsbtn.textContent = "Scissors";
 scissorsbtn.addEventListener("click", () => {
-  playRound(scissors, getComputerChoice());
+  playRound("scissors", getComputerChoice());
 });
 document.body.appendChild(scissorsbtn);
 
