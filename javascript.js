@@ -14,11 +14,15 @@ let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
 
-  if (humanChoice === computerChoice) {
+  if ((humanChoice === "rock" && computerChoice === "rock") ||
+     (humanChoice === "paper" && computerChoice === "paper") ||
+     (humanChoice === "scissors" && computerChoice === "scissors")){
+
     humanScore += 0;
     computerScore += 0;
     scoreBoard.textContent = `It's a tie between ${humanChoice} & ${computerChoice}`
   }
+  
   else if ((humanChoice === "rock" && computerChoice === "scissors") ||
 
     (humanChoice === "paper" && computerChoice === "rock") ||
@@ -29,7 +33,6 @@ function playRound(humanChoice, computerChoice) {
     scoreBoard.textContent = `You win! ${humanChoice} beats ${computerChoice}`
   }
 
-
   else if ((humanChoice === "rock" && computerChoice === "paper") ||
     (humanChoice === "paper" && computerChoice === "scissors") ||
     (humanChoice === "scissors" && computerChoice === "rock")) {
@@ -39,10 +42,12 @@ function playRound(humanChoice, computerChoice) {
 
   scoreBoard.textContent += `  Score : ${humanScore} - ${computerScore}`
 
-  if (humanScore === 5){
+  if (humanScore === 5) {
     scoreBoard.textContent = `🎉 You reached 5! You win the game!`;
-  }else if (computerScore === 5){
+    scoreBoard.textContent = " ";
+  } else if (computerScore === 5) {
     scoreBoard.textContent = `💻 Computer reached 5! Computer wins the game!`;
+    scoreBoard.textContent = " ";
   }
 }
 
