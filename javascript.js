@@ -44,12 +44,9 @@ function playRound(humanChoice, computerChoice) {
 
   if (humanScore === 5) {
     scoreBoard.textContent = `🎉 You reached 5! You win the game!`;
-    humanScore = 0;
-    computerScore = 0;
-  } else if (computerScore === 5) {
+  } 
+  else if (computerScore === 5) {
     scoreBoard.textContent = `💻 Computer reached 5! Computer wins the game!`;
-    humanScore = 0;
-    computerScore = 0;
   }
 }
 
@@ -75,11 +72,14 @@ scissorsbtn.addEventListener("click", () => {
 });
 document.body.appendChild(scissorsbtn);
 
+const resetbtn = document.createElement("button");
+resetbtn.textContent = "Reset";
+document.body.appendChild(resetbtn);
 
-
-
-
-
-
+resetbtn.addEventListener("click", () => {
+  humanScore = 0;
+  computerScore = 0;
+  scoreBoard.textContent = "Game reset to 0 - 0";
+});
 
 
