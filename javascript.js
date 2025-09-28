@@ -15,8 +15,8 @@ let computerScore = 0;
 function playRound(humanChoice, computerChoice) {
 
   if ((humanChoice === "rock" && computerChoice === "rock") ||
-     (humanChoice === "paper" && computerChoice === "paper") ||
-     (humanChoice === "scissors" && computerChoice === "scissors")){
+    (humanChoice === "paper" && computerChoice === "paper") ||
+    (humanChoice === "scissors" && computerChoice === "scissors")) {
 
     humanScore += 0;
     computerScore += 0;
@@ -37,16 +37,16 @@ function playRound(humanChoice, computerChoice) {
     (humanChoice === "paper" && computerChoice === "scissors") ||
     (humanChoice === "scissors" && computerChoice === "rock")) {
     computerScore += 1;
-    scoreBoard.textContent = `You win! ${humanChoice} beats ${computerChoice}`
+    scoreBoard.textContent = `You lose! ${humanChoice} beats ${computerChoice}`
   }
 
   scoreBoard.textContent += `  Score : ${humanScore} - ${computerScore}`
 
   if (humanScore === 5) {
-    scoreBoard.textContent = `🎉 You reached 5! You win the game!`;
-  } 
+    scoreBoard.textContent += `🎉 You reached 5! You win the game!`;
+  }
   else if (computerScore === 5) {
-    scoreBoard.textContent = `💻 Computer reached 5! Computer wins the game!`;
+    scoreBoard.textContent += `💻 Computer reached 5! Computer wins the game!`;
   }
 }
 
@@ -58,6 +58,7 @@ rockbtn.addEventListener("click", () => {
 });
 document.body.appendChild(rockbtn);
 
+
 let paperbtn = document.createElement("button");
 paperbtn.textContent = "Paper";
 paperbtn.addEventListener("click", () => {
@@ -65,12 +66,14 @@ paperbtn.addEventListener("click", () => {
 });
 document.body.appendChild(paperbtn);
 
+
 let scissorsbtn = document.createElement("button");
 scissorsbtn.textContent = "Scissors";
 scissorsbtn.addEventListener("click", () => {
   playRound("scissors", getComputerChoice());
 });
 document.body.appendChild(scissorsbtn);
+
 
 const resetbtn = document.createElement("button");
 resetbtn.textContent = "Reset";
